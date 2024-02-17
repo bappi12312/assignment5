@@ -16,6 +16,8 @@
     body {
       font-family: "Raleway", sans-serif;
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
   </style>
 
@@ -70,20 +72,64 @@
       </div>
     </nav>
 
-    <div class="container mx-auto banner-section bg-[url(images/banner.png)] bg-no-repeat bg-center h-[500px] sm:h-[520px] flex items-center justify-center  sm:max-w-full ">
-     <div class="text-white text-3xl sm:text-6xl font-bold space-y-4">
-      <h2 class="text-center sm:text-left">End-to-End  Travel with</h2>
-      <h2 class="text-center text-[#1DD100] ">P Paribahon</h2>
-      <p class="text-xl text-center leading-6 font-semibold text-gray-300">Your go-to space for neatly organizing and securing your bus <br> tickets.  No more fumbling through pockets or bags  I keep everything in one place.</p>
-     <div class="flex justify-center">
-      <button type="button" class="text-gray-900  bg-[#1DD100]  outline-none border-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100  rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 sm:text-2xl sm:py-4 font-bold">Buy Tickets</button>
-     </div>
-     </div>
+    <div
+      class="container mx-auto banner-section bg-[url(images/banner.png)] bg-no-repeat bg-center h-[500px] sm:h-[520px] flex items-center justify-center  sm:max-w-full ">
+      <div class="text-white text-3xl sm:text-6xl font-bold space-y-4">
+        <h2 class="text-center ">End-to-End Travel with</h2>
+        <h2 class="text-center text-[#1DD100] ">P Paribahon</h2>
+        <p class=" text-xl text-center leading-6 font-semibold text-gray-300">Your go-to space for neatly organizing and
+          securing your bus <br> tickets. No more fumbling through pockets or bags I keep everything in one place.</p>
+        <div class="flex justify-center">
+          <button type="button"
+            class="text-gray-900  bg-[#1DD100]  outline-none border-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100  rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 sm:text-2xl sm:py-4 font-bold">Buy
+            Tickets</button>
+        </div>
+      </div>
     </div>
 
   </header>
-  <main>
+  <main class="sm:mt-32 mt-20">
+    <section class=" grid justify-center items-center gap-y-10">
+      <h2 class="text-3xl text-center font-bold">Best offers for you</h2>
 
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="flex sm:w-[570px] max-w-screen h-[240px] items-center max-h-[570px]">
+          <div class="bg-[#FFBF0F] sm:p-[68px] sm:max-h-[240px] max-h-[200px] py-14 px-8 rounded-xl">
+            <h1 class="text-3xl font-bold">15% OFF</h1>
+            <h4 class="text-xl font-semibold sm:text-nowrap ">on your next purchase</h4>
+            <h5 class="text-xl font-semibold text-gray-600">use by January 2024</h5>
+          </div>
+          <div class="hidden sm:block">
+            <img class="bg-[#FFBF0F] max-h-[220px]" src="images/cupon-devider.png" alt="">
+          </div>
+          <div class="bg-[#FFBF0F] sm:py-[90px] sm:px-10 sm:max-h-[230px] max-h-[200px] py-24 px-6 rounded-xl">
+            <h1 class="text-3xl font-bold">NEW15</h1>
+            <h4 class=" text-gray-600">Coupon Code</h4>
+          </div>
+        </div>
+
+        <div class="flex sm:w-[570px] max-w-screen h-[240px] items-center max-h-[570px]">
+          <div class="bg-[#F78C9C] sm:p-[68px] sm:max-h-[240px] max-h-[200px] py-14 px-5 rounded-xl">
+            <h1 class="text-3xl font-bold">20% OFF</h1>
+            <h4 class="text-xl font-semibold sm:text-nowrap ">on your next purchase</h4>
+            <h5 class="text-xl font-semibold text-gray-600">use by January 2024</h5>
+          </div>
+          <div class="hidden sm:block">
+            <img class="bg-[#F78C9C] max-h-[220px]" src="images/cupon-devider.png" alt="">
+          </div>
+          <div class="bg-[#F78C9C] sm:py-[90px] sm:px-10 sm:max-h-[230px] max-h-[200px] py-24 px-4 rounded-xl">
+            <h1 class="text-3xl font-bold">Couple 20</h1>
+            <h4 class=" text-gray-600">Coupon Code</h4>
+          </div>
+        </div>
+
+      </div>
+
+  <div class="grid justify-center">
+    <button type="button" class="text-[#1DD100] font-semibold bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 rounded-lg  px-5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 max-w-36 py-5 ">See All Offers</button>
+  </div>
+
+    </section>
   </main>
   <footer></footer>
 
