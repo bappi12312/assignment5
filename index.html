@@ -330,7 +330,7 @@
             </div>
 
             <div>
-              <button disabled id="nextbutton"  type="button" class=" w-full focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Next</button>
+              <button  data-modal-target="progress-modal" data-modal-toggle="progress-modal"  disabled id="nextbutton"  type="button" class=" w-full focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Next</button>
             </div>
           </div>
         </div>
@@ -343,7 +343,40 @@
 
 
   </main>
-  <footer></footer>
+  <footer>
+    
+
+
+<!-- Modal toggle -->
+
+
+<!-- Main modal -->
+<div id="progress-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="p-4 md:p-5">
+              <div class="flex justify-center">
+                <img src="images/success.png" alt="">
+              </div>
+
+                <h3 class="mb-1 text-xl font-bold text-green-900 dark:text-white text-center">Success</h3>
+                <p class="text-black font-bold dark:text-gray-400 mb-6 text-center">Thank you for booking our Bus seats. <br> We are working hard to find the best service and deals for you.<p>
+                  <p class="text-gray-500 text-center">Shortly you will find a confirmation in yur email.</p>
+
+
+                <!-- Modal footer -->
+                <div class="flex items-center mt-6 space-x-4 rtl:space-x-reverse">
+
+                    <button data-modal-hide="progress-modal" type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-green-600 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 w-full">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+  
+  </footer>
 
   <script src="assignment5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

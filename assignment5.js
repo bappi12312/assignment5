@@ -85,16 +85,18 @@ for (const sameValues of sameValue) {
       }
 
       inputNumberValue.addEventListener('keyup', (e) => {
-        const value3 = e.target.value;
+       
 
         if (e.target.value && counter >= 1) {
           nextButton.removeAttribute('disabled');
+          nextButton.addEventListener('click', (e) => {
+            const modal = document.querySelector('#progress-modal')
+            console.log(modal);
+            modal.classList.remove('hidden')
+          
+          })
         }
         
-
-        copounButton.addEventListener('click', (e) => {
-
-        })
 
       })
     }
