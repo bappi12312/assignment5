@@ -74,9 +74,13 @@ for (const sameValues of sameValue) {
              if (value === 'NEW15') {
               let discount = addingTotal * 15 / 100
               grandtotal.innerText = addingTotal - discount;
+              copounButton.classList.add('hidden')
+              copoun.classList.add('hidden');
              } else if (value === 'Couple 20') {
               let discount = addingTotal * 20 / 100
               grandtotal.innerText = addingTotal - discount ;
+              copounButton.classList.add('hidden')
+              copoun.classList.add('hidden');
              } else {
               alert('you typed worg copoun code')
              }
@@ -91,7 +95,6 @@ for (const sameValues of sameValue) {
           nextButton.removeAttribute('disabled');
           nextButton.addEventListener('click', (e) => {
             const modal = document.querySelector('#progress-modal')
-            console.log(modal);
             modal.classList.remove('hidden')
           
           })
