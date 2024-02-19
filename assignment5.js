@@ -61,16 +61,36 @@ for (const sameValues of sameValue) {
 
       totalValue.innerHTML = addingTotal;
 
-    grandtotal.innerText = addingTotal;
+      grandtotal.innerText = addingTotal;
 
-    if (counter === 4) {
-      copounButton.removeAttribute('disabled');
-      copoun.removeAttribute('disabled');
-    }
- 
+       
 
+      if (counter === 4) {
+        copounButton.removeAttribute('disabled');
+        copoun.removeAttribute('disabled');
+        copoun.addEventListener('keyup', (e) => {
+          const value = e.target.value;
+          copounButton.addEventListener('click', (e) => {
+             if (value === 'NEW15' || value === 'Couple 20') {
+              grandtotal.innerText = addingTotal * .15 ;
+             }
+          })
+         })
+      }
 
+      inputNumberValue.addEventListener('keyup', (e) => {
+        const value3 = e.target.value;
 
+        if (e.target.value && counter >= 1) {
+          nextButton.removeAttribute('disabled');
+        }
+        
+
+        copounButton.addEventListener('click', (e) => {
+
+        })
+
+      })
     }
     if (counter > 4) {
       alert('You can select maximam of seat number 4')
@@ -82,6 +102,9 @@ for (const sameValues of sameValue) {
 
   })
 }
+
+
+
 
 
 
