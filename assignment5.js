@@ -69,10 +69,16 @@ for (const sameValues of sameValue) {
         copounButton.removeAttribute('disabled');
         copoun.removeAttribute('disabled');
         copoun.addEventListener('keyup', (e) => {
-          const value = e.target.value;
+          let value = e.target.value;
           copounButton.addEventListener('click', (e) => {
-             if (value === 'NEW15' || value === 'Couple 20') {
-              grandtotal.innerText = addingTotal * .15 ;
+             if (value === 'NEW15') {
+              let discount = addingTotal * 15 / 100
+              grandtotal.innerText = addingTotal - discount;
+             } else if (value === 'Couple 20') {
+              let discount = addingTotal * 20 / 100
+              grandtotal.innerText = addingTotal - discount ;
+             } else {
+              alert('you typed worg copoun code')
              }
           })
          })
