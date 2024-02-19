@@ -19,42 +19,60 @@ const copounButton = document.querySelector('#copuonvalue');
 
 const totalValue = document.querySelector('#totalprice');
 
-const grandtotal = document.querySelector('#grandvalue');
+const grandtotal = document.querySelector('#grandtotal');
 
 const appendChild = document.querySelector('#appendChild');
+
+
 
 let count = 0
 let decresingValue = 40;
 let isSelected = true;
+let counter = 0;
+let totalCount = 0;
 
 for (const sameValues of sameValue) {
   sameValues.addEventListener('click', (e) => {
+    counter += 1;
 
-    count += 1;
+    if (counter <= 4 && isSelected) {
 
-    increaseingSeat.innerHTML = count;
-    decresingValue -= 1;
-    DecreasingSeat.innerHTML = decresingValue;
+      count += 1;
 
-    const allSameValue = e.target.innerText;
+      increaseingSeat.innerHTML = count;
+      decresingValue -= 1;
+      DecreasingSeat.innerHTML = decresingValue;
 
-    if (count <= 4 && e.target.innerText == e.target.innerText) {
+      const allSameValue = e.target.innerText;
 
-      if (isSelected) {
-        sameValues.classList.add('bg-[#11d445]')
-        appendChild.innerHTML += `
-    <div class="flex justify-between">
-    <h3>${allSameValue}</h3>
-    <h3>Economey</h3>
-    <h3>550</h3>
-    </div>
-    `;
-    isSelected = false;
-      }
+      sameValues.classList.add('bg-[#11d445]')
+      appendChild.innerHTML += `
+      <div class="flex justify-between">
+      <h3>${allSameValue}</h3>
+      <h3>Economey</h3>
+      <h3>550</h3>
+      </div>
+  `
+
+
+      e.target.setAttribute('disabled', 'disabled');
+
+      let addingTotal = totalCount += 550
+
+      totalValue.innerHTML = addingTotal;
+
+    grandtotal.innerText = addingTotal;
+
+    if (counter === 4) {
+      copounButton.removeAttribute('disabled');
+      copoun.removeAttribute('disabled');
+    }
+ 
+
 
 
     }
-    else {
+    if (counter > 4) {
       alert('You can select maximam of seat number 4')
     }
 
@@ -64,6 +82,8 @@ for (const sameValues of sameValue) {
 
   })
 }
+
+
 
 
 
